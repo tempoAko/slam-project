@@ -1,0 +1,35 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+ 
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+
+  h2 {
+    font-family: 'Arial', sans-serif;
+    color: rgb(243, 243, 243);
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+
+td {
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
