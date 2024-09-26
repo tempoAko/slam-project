@@ -1,0 +1,145 @@
+/* Style général */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1d1a1a; /* Fond sombre, reste inchangé */
+    color: #dcdcdc; /* Texte gris clair pour un contraste plus doux */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px; /* Ajustement pour plus de respiration */
+}
+
+h1 {
+    font-size: 3em;
+    color: #fafafa; /* Doré doux et moins flashy */
+    letter-spacing: 1px;
+    animation: fadeInDown 1s ease-in-out;
+    text-transform: uppercase; /* Titre tout en majuscules pour plus d'impact */
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacement augmenté pour plus de respiration */
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #bfbfbf; /* Couleur gris clair */
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d0a85c; /* Couleur dorée au survol */
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #d0a85c;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Section principale */
+section {
+    max-width: 800px;
+    text-align: center;
+    padding: 60px 20px; /* Padding augmenté pour une meilleure esthétique */
+    animation: fadeIn 1.5s ease-in-out;
+    margin-top: 40px;
+    background-color: #2a2727; /* Fond plus doux pour la section */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre pour effet de profondeur */
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #bfbfbf; /* Gris clair pour les titres */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Majuscules pour plus d'impact */
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #dcdcdc; /* Gris doux */
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #dcdcdc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #bfbfbf;
+    padding: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: auto;
+    padding: 20px;
+    width: 100%;
+    background-color: transparent; /* Footer sans fond */
+    letter-spacing: 0.5px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
