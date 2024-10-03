@@ -8,22 +8,29 @@
 </head>
 <body>
     <form action="">
+        <ul>
+            <li><a href="./Projets/Ingetis/ingetis.html">Présentation Ingetis</a></li>
+            <li><a href="./Projets/index.html">Travaux Pratique</a></li>
+            <li><a href="https://ingetis.com/">Site Ingetis</a></li>
+        </ul>
 
-    <ul>
-
-        <li><a href="./Projets/Ingetis/ingetis.html">Présentation Ingetis</a></li>
-        <li><a href="./Projets/index.html">Travaux Pratique</a></li>
-        <li><a href="https://ingetis.com/">Site Ingetis</a></li>
-    </ul>
-
-
-        <input type="radio" name="fancy" autofocus value="page1"/>
+        <input type="radio" name="fancy" value="page1" id="page1" checked/>
         <input type="radio" name="fancy" value="page2" id="page2" />
         <input type="radio" name="fancy" value="page3" id="page3" />
         <input type="radio" name="fancy" value="page4" id="page4" />			
-        <label for="page1">INGETIS</label><label for="page2">400 ETUDIANTS</label><label for="page3">9 FORMATIONS</label><label for="page4">62 bis rue Gay Lussac, 75005 Paris</label>
+        
+        <label for="page1">INGETIS</label>
+        <label for="page2">400 ETUDIANTS</label>
+        <label for="page3">9 FORMATIONS</label>
+        <label for="page4">62 bis rue Gay Lussac, 75005 Paris</label>
 
         <div class="keys">Utiliser les boutons afin de défiler de gauche à droite</div>
-</form>
+        
+        <!-- Flèches de navigation -->
+        <div class="arrows">
+            <label for="page1" class="arrow left">&#10094;</label>
+            <label for="page2" class="arrow right">&#10095;</label>
+        </div>
+    </form>
 </body>
 </html>
