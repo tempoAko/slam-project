@@ -37,7 +37,7 @@ body {
 
 .menu-icon span {
     display: block;
-    width: 100%;
+    width: 105%;
     height: 4px; /* Épaisseur de chaque barre */
     background-color: #333; /* Couleur des barres */
     border-radius: 2px;
@@ -154,26 +154,42 @@ details[open] .menu-icon span:nth-child(3) {
     margin-bottom: 20px;
 }
 
-.cta-button {
-    background-color: #f97300;
-    color: white;
-    padding: 12px 35px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 18px;
+/* Ajustements du bouton */
+.cta-button ul {
+    list-style-type: none; /* Supprime le point devant le lien */
+    margin: 0; /* Supprime les marges par défaut de l'ul */
+    padding: 0; /* Supprime les paddings par défaut de l'ul */
+    display: flex; /* Pour éviter tout comportement inattendu */
+    justify-content: center; /* Centrer le bouton */
+}
+
+.cta-button a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: white; /* Couleur du texte */
+    display: inline-block; /* Permet de rendre tout le bouton cliquable */
+    padding: 15px 25px; /* Ajuste le padding pour agrandir légèrement le bouton sans qu'il soit trop long */
+    background-color: #f97300; /* Couleur du fond du bouton */
+    border-radius: 30px; /* Arrondis les bords du bouton */
     transition: background-color 0.3s, transform 0.3s;
+    font-size: 18px; /* Augmente légèrement la taille de la police */
+    width: auto; /* Empêche que le bouton soit trop long */
 }
 
-.cta-button:hover {
-    background-color: #ff7f50;
-    transform: scale(1.05);
+.cta-button a:hover {
+    background-color: #ff7f50; /* Change la couleur au survol pour correspondre au bouton */
+    transform: scale(1.05); /* Zoom au survol */
 }
 
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-100px); }
-    to { opacity: 1; transform: translateX(0); }
+.cta-button ul {
+    list-style: none; /* Assure que le point ne soit pas généré */
+    margin: 0; /* Évite toute marge indésirable */
+    padding: 0; /* Supprime les padding par défaut */
 }
+
+.cta-button ul li::before {
+    content: none; /* Empêche tout contenu pseudo-élément */
+}
+
 
 /* Other Sections (About, Work, Skills, Contact) */
 .about-section, .work-section, .skills-section, .contact-section {

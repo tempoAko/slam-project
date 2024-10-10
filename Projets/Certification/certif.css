@@ -4,6 +4,9 @@ body {
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content horizontally */
     min-height: 100vh;
 }
 
@@ -15,7 +18,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
-    margin-top: 100px; /* Add space from top to avoid overlapping with navbar */
+    margin-top: 120px; /* Add space from top to avoid overlapping with navbar */
     text-align: center;
 }
 
@@ -66,23 +69,25 @@ body {
 /* Navigation bar */
 .navi {
     width: 100%;
-    background-color: #333;
+    background-color: #007bff;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    display: flex;
 }
 
 li {
-    float: left;
+    margin: 0 20px; /* Add spacing between links */
 }
 
 li a {
@@ -91,8 +96,30 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .pdf-container {
+        margin-top: 80px; /* Adjust top margin for mobile */
+    }
+
+    .pdf-grid {
+        grid-template-columns: 1fr;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 10px 0; /* Adjust spacing between links for mobile */
+    }
 }

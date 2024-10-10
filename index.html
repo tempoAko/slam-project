@@ -1,36 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Accueil - DABIN Mathis</title>
+    <title>Portfolio - DABIN Mathis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <form action="">
-        <ul>
-            <li><a href="./Projets/Ingetis/ingetis.html">Présentation Ingetis</a></li>
-            <li><a href="./Projets/index.html">Travaux Pratique</a></li>
-            <li><a href="https://ingetis.com/">Site Ingetis</a></li>
-        </ul>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="nav-bar">
+            <details>
+                <summary class="menu-icon"><span></span><span></span><span></span></summary>
+                <div class="menu">
+                    <a href="#Accueil">Accueil</a>
+                    <a href="#about">A propos</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </details>
+        </nav>
+    </header>
 
-        <input type="radio" name="fancy" value="page1" id="page1" checked/>
-        <input type="radio" name="fancy" value="page2" id="page2" />
-        <input type="radio" name="fancy" value="page3" id="page3" />
-        <input type="radio" name="fancy" value="page4" id="page4" />			
-        
-        <label for="page1">INGETIS</label>
-        <label for="page2">400 ETUDIANTS</label>
-        <label for="page3">9 FORMATIONS</label>
-        <label for="page4">62 bis rue Gay Lussac, 75005 Paris</label>
-
-        <div class="keys">Utiliser les boutons afin de défiler de gauche à droite</div>
-        
-        <!-- Flèches de navigation -->
-        <div class="arrows">
-            <label for="page1" class="arrow left">&#10094;</label>
-            <label for="page2" class="arrow right">&#10095;</label>
+    <!-- Image Carousel (carrousel d'images) -->
+    <section class="img-nav">
+        <div class="carousel">
+            <div class="images">
+                <img src="code-snapshot.png" alt="Image 1">
+                <img src="code-snapshot2.png" alt="Image 2">
+                <img src="code-snapshot3.png" alt="Image 3">
+                <!-- <img src="image4.jpg" alt="Image 4"> -->
+            </div>
         </div>
-    </form>
+    </section>
+
+    <!-- Home Section -->
+    <section id="Accueil" class="home-section">
+        <div class="intro">
+            <h1>Bienvenue</h1><br>
+            <p>Bienvenue sur mon PorteFolio, <br>cliquez juste en dessus pour accédez à mes travaux pratique</p><br>
+            <ul class="cta-button">
+            <a href="../Projets/index.html">Travaux Pratique</a>
+            </ul>
+          </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>A propos</h2><br>
+            <p>Passionné par le développement Front-End, <br> Et les technologies moderne comme HTML et CSS</p>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Compétences </h2><br>
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <ul class="wrapper">
+            <li class="icon facebook">
+              <span class="tooltip">Facebook</span>
+              <svg
+                viewBox="0 0 320 512"
+                height="1.2em"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                ></path>
+              </svg>
+            </li>
+            <li class="icon github">
+              <span class="tooltip">GitHub</span>
+              <svg
+                height="1.8em"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.2.68-.5v-1.72c-2.79.6-3.38-1.38-3.38-1.38-.46-1.18-1.18-1.5-1.18-1.5-.9-.62.06-.6.06-.6 1 .06 1.54 1 1.54 1 .9 1.54 2.3 1.1 2.86.9.1-.64.38-1.1.7-1.36-2.23-.26-4.56-1.12-4.56-5 0-1.12.4-2 1.06-2.74-.1-.26-.46-1.3.1-2.64 0 0 .84-.26 2.8 1.06A9.8 9.8 0 0 1 12 6.94c.86.02 1.72.12 2.52.34 1.94-1.32 2.78-1.06 2.78-1.06.56 1.34.2 2.4.1 2.64.68.74 1.06 1.62 1.06 2.74 0 3.88-2.34 4.74-4.58 5 .4.36.76 1.08.76 2.18v3.26c0 .3.2.6.7.5A10 10 0 0 0 12 2z"
+                ></path>
+              </svg>
+            </li>
+            <li class="icon gmail">
+              <span class="tooltip">Gmail</span>
+              <svg
+                height="1.2em"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 12.713L.025 4.05C.01 4.064 0 4.08 0 4.097V19.25c0 .413.337.75.75.75h22.5c.413 0 .75-.337.75-.75V4.097c0-.017-.01-.033-.025-.047L12 12.713zM12 10.73L23.835 3.5H.165L12 10.73z"
+                ></path>
+              </svg>
+            </li>
+          </ul>
 </body>
+
 </html>
