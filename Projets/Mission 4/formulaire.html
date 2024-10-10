@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de réservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menu de navigation centré -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="main.html">Accueil</a></li>
+            <li><a href="carte.html">Carte</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal centré -->
+    <div class="container">
+        <form action="#" method="POST" class="formulaire-reservation">
+            <div class="form-title">
+                <h2>Formulaire de Réservation</h2>
+            </div>
+            <div class="form-group">
+                <div class="column">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" maxlength="50" required>
+                </div>
+                <div class="column">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" maxlength="50" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="column">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" maxlength="100" required>
+                </div>
+                <div class="column">
+                    <label for="ville">Ville de réservation</label>
+                    <select id="ville" name="ville" required>
+                        <option value="" disabled selected>Choisissez une ville</option>
+                        <option value="paris">Paris</option>
+                        <option value="nice">Nice</option>
+                        <option value="marseille">Marseille</option>
+                        <option value="lille">Lille</option>
+                        <option value="bordeaux">Bordeaux</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="column">
+                    <label for="date">Date de réservation</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="column">
+                    <label for="departement">Numéro de département</label>
+                    <input type="number" id="departement" name="departement" placeholder="Ex: 75" min="1" max="95" required>
+                </div>
+            </div>
+
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label for="conditions">J'accepte les <a href="#">conditions générales d'utilisation</a></label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Valider</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
