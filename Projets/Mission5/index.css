@@ -1,0 +1,176 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #a5a1a1;
+    margin: 0;
+  }
+  
+  /* Menu de navigation */
+  header {
+    background-color: #1877f2;
+    padding: 2px 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none; 
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #0617ff;
+  }
+
+
+  .groupe {
+    display: flex;
+}
+
+.cv {
+    border: 9px solid black;
+    width: 70%;
+    margin-top: 15px;
+    background-color: rgb(105, 103, 103);
+    border-radius: 8px;
+    align-items: center;
+    margin-left: 15%;
+}
+
+/* Information Personnel + Photo d'identité */
+
+.top {
+    margin-top: 15px;
+    width: 95%;
+    margin-left: 12%;
+    display: flex;
+    height: auto;
+}
+
+.top h2, p {
+    margin-left: 10px;
+}
+
+.info {
+    border: 2px solid;
+    border-color: black;
+    background-color: grey;
+    border-radius: 5px;
+    width: 45%;
+    height: auto;
+}
+
+.info p {
+    margin-top: -20px;
+}
+
+.photo img {
+    height: auto;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 8px;
+    width: 100%;
+    margin-left: 60%;
+}
+
+/* Formation */
+.formation {    
+    margin-top: 15px;
+    width: auto;
+    margin-left: 12%;
+    /* padding: 0; */
+}
+
+
+.formation h2 {
+    margin: 0;
+    padding: 5px;
+}
+
+
+.date-forma {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: grey;
+    flex-basis: 20%;
+}
+
+.forma {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: grey;
+    width: 50%;
+    margin-left: 5%;
+}
+
+
+
+
+/* Expériences Professionnel */
+
+.exp {
+    margin-top: 15px;
+    width: auto;
+    margin-left: 12%;
+    height: auto; 
+}
+
+.date-exp {
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    background-color: grey;
+    width: 15%;
+}
+
+.date-exp p {
+    margin-top: 35px;
+}
+
+.exp-perso {
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    background-color: grey;
+    margin-left: 10%;
+    width: 50%;
+    height: auto;
+}
+
+/* Langues entrangères + Compétences Informatiques  */
+
+.autres {
+    margin-top: 15px;
+    width: auto;
+    margin-left: 12%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.langue {
+    border: 2px solid;
+    border-color: black;
+    background-color: grey;
+    border-radius: 5px;
+    width: 20%;
+}
+
+.informatique {
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    background-color: grey;
+    margin-left: 5%;
+    width: 50%;
+    height: auto;
+}
