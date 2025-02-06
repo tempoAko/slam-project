@@ -1,99 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Présentation TP</title>
+    <title>Portfolio - Accueil</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll("nav ul li a");
+        links.forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    });
+</script>
 <body>
     <header>
         <nav>
-            <ul class="nav-links">
-                <li><a href="./Projets/Certification/certif.html">Certification CNIL</a></li>
-                <li><a href="https://ingetis.com/">Ingetis</a></li>
+            <div class="logo">Mon Portfolio</div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Derniers Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
             </ul>
         </nav>
     </header>
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Étudiant en BTS SIO - Passionné par le développement et l'informatique</p>
+            <a href="wait.html" class="btn">Découvrir mes projets</a>
+        </div>
+    </section>
+    <section id="projets" class="section">
+        <h2>Mes Projets</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="projet1.jpg" alt="Projet 1">
+                <h3>Projet 1</h3>
+                <p>Description du projet 1</p>
+            </div>
+            <div class="project-card">
+                <img src="projet2.jpg" alt="Projet 2">
+                <h3>Projet 2</h3>
+                <p>Description du projet 2</p>
+            </div>
+        </div>
+    </section>
+    <section id="competences" class="section">
+        <h2>Mes Compétences</h2>
+        <ul class="skills-list">
+            <li>Développement Web</li>
+            <li>Programmation en Python</li>
+            <li>Base de données SQL</li>
+        </ul>
+    </section>
 
-    <main>
-        <section class="projects">
-            <div class="card">
-                <a href="./Projets/Métier/metiers.html">
-                    <img src="projet.webp" alt="Travaux Pratique 1">
-                    <h3>Travaux Pratique n°1</h3>
-                    <p>Présentation SIO</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="./Projets/tp2/index.html">
-                    <img src="projet.webp" alt="Travaux Pratique 2">
-                    <h3>Travaux Pratique n°2</h3>
-                    <p>Menu de présentation</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="./Projets/Connexion/register.html">
-                    <img src="projet.webp" alt="Travaux Pratique 3">
-                    <h3>Travaux Pratique n°3</h3>
-                    <p>Menu mail</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="./Projets/Mission4/main.html">
-                    <img src="projet.webp" alt="Travaux Pratique 4">
-                    <h3>Travaux Pratique n°4</h3>
-                    <p>Site de réservation</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="./Projets/JavaScript1/main.html">
-                    <img src="projet.webp" alt="Travaux Pratique 5">
-                    <h3>Travaux Pratique n°5</h3>
-                    <p>Première mission Java-Script</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="./Projets/TP4/main.html">
-                    <img src="projet.webp" alt="Travaux Pratique 6">
-                    <h3>Travaux Pratique n°6</h3>
-                    <p>Présentation Monde de Némo</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="./Projets/TP5/main.html">
-                    <img src="projet.webp" alt="Travaux Pratique 7">
-                    <h3>Travaux Pratique n°7</h3>
-                    <p>Calculatrice Java-Script</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="./Projets/Mission5/index.html">
-                    <img src="projet.webp" alt="Travaux Pratique 8">
-                    <h3>Travaux Pratique n°8</h3>
-                    <p>CV en ligne</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="./Projets/TP6/index.html">
-                    <img src="projet.webp" alt="Travaux Pratique 9">
-                    <h3>Travaux Pratique n°9</h3>
-                    <p>Page de connexion</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="./Projets/TP8/index.html">
-                    <img src="projet.webp" alt="Travaux Pratique 9">
-                    <h3>Travaux Pratique n°10</h3>
-                    <p>Base de donnée</p>
-                </a>
-            </div>
-        </section>
-    </main>
+    <footer>
+        <p>&copy; 2025 Mon Portfolio - Tous droits réservés.</p>
+    </footer>
 </body>
 </html>

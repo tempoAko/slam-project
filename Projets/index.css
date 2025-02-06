@@ -1,0 +1,98 @@
+/* Basic styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d5d2d2;
+  margin: 0;
+  color: #1877f2;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #1877f2;
+  padding: 2px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0617ff;
+}
+
+/* Project Section */
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1200px;
+  gap: 15px; /* Reduce gap for a more compact layout */
+}
+
+.card {
+  margin: 15px;
+  background-color: #ebe6e6;
+  border-radius: 10px;
+  padding: 15px; /* Smaller padding */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 180px; /* Reduced box size */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 80px; /* Reduce image size */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.2em; /* Slightly smaller text */
+}
+
+.card p {
+  font-size: 0.9em; /* Smaller paragraph text */
+  color: #0b59be;
+}
+
+/* Remove underline from all links and reset colors */
+a {
+  text-decoration: none;
+  color: inherit; /* Make sure links inherit the color of surrounding text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .projects {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 70%;
+  }
+}
