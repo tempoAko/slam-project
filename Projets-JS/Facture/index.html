@@ -1,47 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script src="srcipt.js"></script>
     <title>TP7 / Facture</title>
 </head>
 <body>
-    <h1>Facture en Javascript</h1>
-    <hr>
-    <table border="1">
-        <tr>
-            <th>Article : </th>
-            <th>Prix : </th>
-            <th>Quantité : </th>
-            <th>Résultat : </th>
-        </tr>
-        <tr>
-            <td>E1</td>
-            <td><input type="text" id="prix1" placeholder="entrer une valeur"></td>
-            <td><input type="text" id="quantite1" placeholder="entrer une valeur"></td>
-            <td><input type="text" id="resultat1" placeholder="0" readonly></td>
-        </tr>
-        <tr>
-            <td>E2</td>
-            <td><input type="text" id="prix2" placeholder="entrer une valeur"></td>
-            <td><input type="text" id="quantite2" placeholder="entrer une valeur"></td>
-            <td><input type="text" id="resultat2" placeholder="0" readonly></td>
-        </tr>
-        <tr>
-            <td>E3</td>
-            <td><input type="text" id="prix3" placeholder="entrer une valeur"></td>
-            <td><input type="text" id="quantite3" placeholder="entrer une valeur"></td>
-            <td><input type="text" id="resultat3" placeholder="0" readonly></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><center><button onclick="vider()">Renitialiser</button></center></td>
-            <td><center><button onclick="resultat()">Resultat</button></center></td>
-            <td><input type="text" id="totale" placeholder="0" readonly></td>
-        </tr>
-    </table>
-    <a href="/Projets-JS/main.html"><button id="acceuil">Acceuil</button></a>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Accueil</a></li>
+                <li><a href="/wait.html">Accueil Projet</a></li>
+                <li><a href="/Projets-JS/main.html">Accueil Projets-JS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Facture en Javascript</h1>
+        <hr>
+        <table border="1">
+            <tr>
+                <th>Article :</th>
+                <th>Prix :</th>
+                <th>Quantité :</th>
+                <th>Résultat :</th>
+            </tr>
+            <tr>
+                <td>E1</td>
+                <td><input type="number" id="prix1" placeholder="entrer une valeur" step="0.01"></td>
+                <td><input type="number" id="quantite1" placeholder="entrer une valeur"></td>
+                <td><input type="text" id="resultat1" placeholder="0" readonly></td>
+            </tr>
+            <tr>
+                <td>E2</td>
+                <td><input type="number" id="prix2" placeholder="entrer une valeur" step="0.01"></td>
+                <td><input type="number" id="quantite2" placeholder="entrer une valeur"></td>
+                <td><input type="text" id="resultat2" placeholder="0" readonly></td>
+            </tr>
+            <tr>
+                <td>E3</td>
+                <td><input type="number" id="prix3" placeholder="entrer une valeur" step="0.01"></td>
+                <td><input type="number" id="quantite3" placeholder="entrer une valeur"></td>
+                <td><input type="text" id="resultat3" placeholder="0" readonly></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><center><button onclick="vider()">Réinitialiser</button></center></td>
+                <td><center><button onclick="calculer()">Résultat</button></center></td>
+                <td><input type="text" id="totale" placeholder="0" readonly></td>
+            </tr>
+        </table>
+        <a href="/Projets-JS/main.html"><button id="acceuil">Accueil</button></a>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
